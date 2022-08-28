@@ -8,6 +8,7 @@ const Section3 = () => (
   <Area>
     <Wrapper>
       <Section type="fadeLeft" delay={300}>
+        <SectionIcon />
         <SectionContent>
           <span>손님이 끊기지 않는이유</span>
         </SectionContent>
@@ -31,6 +32,7 @@ const Section = styled(AnimationWrapper)`
   width: 100%;
   height: 150vh;
   @media (max-width: 1000px) {
+    gap: 0.1rem;
     height: 90vh;
   }
 `;
@@ -51,11 +53,6 @@ const Area = styled.div`
     linear-gradient(to right, #eaeaea 1px, #c3ddda 1px);
   background-color: #c3ddda;
   background-size: 20px 20px;
-
-  @media (max-width: 900px) {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 `;
 
 const SectionContent = styled.div`
@@ -73,7 +70,8 @@ const SectionContent = styled.div`
   -webkit-text-stroke: 0.12rem white;
 
   @media (max-width: 550px) {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    white-space: nowrap;
     -webkit-text-stroke: 0.08rem white;
   }
 `;
@@ -93,7 +91,8 @@ const SectionContent2 = styled.div`
   -webkit-text-stroke: 0.12rem white;
 
   @media (max-width: 550px) {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    white-space: nowrap;
     -webkit-text-stroke: 0.08rem white;
   }
 `;
@@ -107,5 +106,12 @@ const SectionSliderGroup = styled.div`
   @media (max-width: 800px) {
     width: 100%;
   }
+`;
+
+const SectionIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
 `;
 export default Section3;
