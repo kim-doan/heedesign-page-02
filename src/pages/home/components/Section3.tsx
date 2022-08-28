@@ -1,27 +1,22 @@
-import FlagIcon from "assets/flagIcon.png";
-import ReviewImage from "assets/reviewImage.png";
-import ReviewImageM from "assets/reviewImageM.png";
-import SectionBackground2 from "assets/sectionBackground2.png";
-import SectionBackground2M from "assets/sectionBackground2M.png";
 import React from "react";
 import styled from "styled-components";
 
 import { AnimationWrapper } from "components/Animation";
+import ImageSlide from "components/ImageSlider";
 
 const Section3 = () => (
   <Area>
     <Wrapper>
       <Section type="fadeLeft" delay={300}>
-        <SectionIcon>
-          <img src={FlagIcon} height="100%" alt="check" />
-        </SectionIcon>
         <SectionContent>
           <span>손님이 끊기지 않는이유</span>
         </SectionContent>
         <SectionContent2>
           <span>후기가 증명</span>
         </SectionContent2>
-        <SectionImageGroup />
+        <SectionSliderGroup>
+          <ImageSlide />
+        </SectionSliderGroup>
       </Section>
     </Wrapper>
   </Area>
@@ -52,13 +47,12 @@ const Wrapper = styled.div`
 
 const Area = styled.div`
   width: 100%;
-  background-image: url(${SectionBackground2});
-  background-color: #ff8787;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(#eaeaea 1px, transparent 1px),
+    linear-gradient(to right, #eaeaea 1px, #c3ddda 1px);
+  background-color: #c3ddda;
+  background-size: 20px 20px;
 
   @media (max-width: 900px) {
-    background-image: url(${SectionBackground2M});
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -104,28 +98,14 @@ const SectionContent2 = styled.div`
   }
 `;
 
-const SectionImageGroup = styled.div`
+const SectionSliderGroup = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 65%;
   height: 75vh;
-  background-image: url(${ReviewImage});
-  background-repeat: no-repeat;
-  background-size: cover;
 
   @media (max-width: 800px) {
-    height: 50vh;
-    background-image: url(${ReviewImageM});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    width: 100%;
   }
-`;
-
-const SectionIcon = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3.5rem;
 `;
 export default Section3;

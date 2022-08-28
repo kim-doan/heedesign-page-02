@@ -6,7 +6,10 @@ import phone from "../assets/contactPhone.png";
 
 const FixedButtonGroup = () => (
   <Group>
-    <KakaoContactAnchor href="http://pf.kakao.com/_VTVHb/chat" target="_blank">
+    <KakaoContactAnchor
+      href="http://pf.kakao.com/_xdfxhIxj/chat"
+      target="_blank"
+    >
       <ContactKakaoImg alt="Contact Kakao" src={kakao} />
       <p>
         <b>카카오톡</b> 문의하기
@@ -25,6 +28,7 @@ const Group = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
