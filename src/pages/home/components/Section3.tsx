@@ -30,8 +30,9 @@ const TopRect = styled.div`
 `;
 
 const TitleSection = styled.div<{ color?: string }>`
+  padding-right: 20px;
+  padding-left: 20px;
   color: #fff;
-  white-space: nowrap;
 
   b {
     /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
@@ -47,11 +48,11 @@ const TitleSection = styled.div<{ color?: string }>`
 
   @media (max-width: 700px) {
     span {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
 
     b {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
   }
 `;
@@ -104,7 +105,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: calc(1280px + 15rem);
   height: 100%;
   margin: 0 auto;
 `;

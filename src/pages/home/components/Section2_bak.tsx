@@ -98,7 +98,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: calc(1280px + 15rem);
   margin: 0 auto;
 `;
 
