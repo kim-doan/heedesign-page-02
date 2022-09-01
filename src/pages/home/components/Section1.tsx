@@ -1,5 +1,4 @@
 import mainSectionMobile from "assets/mainSection_m.png";
-import mainSectionTablet from "assets/mainSection_t.png";
 import mainSection from "assets/mainSection.png";
 import React from "react";
 import styled from "styled-components";
@@ -11,25 +10,19 @@ const Section1 = () => (
         <Partition>
           <BlankArea />
           <Title>
-            {/* <TitleSection1>
-              소중한 시간 절약하세요! 여기가 진짜입니다!
-            </TitleSection1> */}
-            <TitleSection2>
-              <span>울산에서</span>
-            </TitleSection2>
-            <TitleSection2 color="#002D51">
+            <TitleSection color="#011E23">
+              <span>이세상</span>
+            </TitleSection>
+            <TitleSection color="#011E23">
               <span>
-                <b>휴대폰 성지</b>를 찾고 계시다면
+                <b>가격이</b>
               </span>
-            </TitleSection2>
-            <TitleSection2 color="#002D51" style={{ whiteSpace: "nowrap" }}>
+            </TitleSection>
+            <TitleSection color="#011E23">
               <span>
-                <b>폰싸게파는언니</b>
+                <b>아니다</b>
               </span>
-            </TitleSection2>
-            {/* <TitleSection3 color="#002D51">
-              울산에서 성지를 찾는 <b>한분의 고객도</b> 놓치지 않겠습니다
-            </TitleSection3> */}
+            </TitleSection>
           </Title>
         </Partition>
       </Section>
@@ -39,10 +32,6 @@ const Section1 = () => (
 
 const BlankArea = styled.div`
   flex: 2;
-
-  @media (max-width: 1450px) {
-    flex: 0;
-  }
 `;
 
 const Partition = styled.div`
@@ -54,69 +43,38 @@ const Partition = styled.div`
 const Title = styled.div`
   flex: 1 1;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
-  line-height: 1.5;
+  font-family: GmarketSansLight;
+  line-height: 1.3;
   text-align: start;
-  -webkit-text-stroke: 0.05rem black;
-
-  @media (max-width: 1450px) {
-    margin-bottom: 2.8em;
-    text-align: center;
-    background-color: rgb(0 45 81 / 70%);
-  }
-
-  @media (max-width: 900px) {
-    padding: 1rem;
-  }
 
   @media (max-width: 500px) {
     margin-bottom: 0;
   }
 `;
 
-// const TitleSection1 = styled.div<{ color?: string }>`
-//   color: #fff;
-//   white-space: word-wrap;
-
-//   b {
-//     color: ${(props) => props.color || "#fff"};
-//   }
-// `;
-const TitleSection2 = styled.div<{ color?: string }>`
-  color: #fff;
+const TitleSection = styled.div<{ color?: string }>`
+  color: #011e23;
+  letter-spacing: 0.25rem;
+  white-space: nowrap;
 
   b {
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: GmarketSans;
+    font-weight: bold;
     color: ${(props) => props.color || "#fff"};
-    box-shadow: 0 0.7rem rgb(255 255 255 / 50%);
   }
 
   span {
-    font-size: 2.6rem;
-  }
-
-  @media (max-width: 1450px) {
-    b {
-      color: #ffdea9;
-    }
+    font-size: 3.8rem;
   }
 
   @media (max-width: 700px) {
     span {
-      font-size: 2rem;
-      white-space: word-wrap;
+      font-size: 3rem;
+      letter-spacing: 0.1rem;
     }
   }
 `;
-
-// const TitleSection3 = styled.div<{ color?: string }>`
-//   color: #14bbb1;
-//   white-space: word-wrap;
-//   -webkit-text-stroke: 0.05rem white;
-
-//   b {
-//     color: ${(props) => props.color || "#fff"};
-//   }
-// `;
 
 const Section = styled.div`
   display: flex;
@@ -125,11 +83,14 @@ const Section = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  @media (max-width: 1450px) {
+
+  @media (max-width: 1280px) {
     justify-content: end;
+    height: calc(100vh - 71px);
   }
+
   @media (max-width: 500px) {
-    height: 60vh;
+    height: 500px;
   }
 `;
 
@@ -143,10 +104,8 @@ const Wrapper = styled.div`
   background-image: url(${mainSection});
   background-repeat: no-repeat;
   background-size: cover;
-  @media (max-width: 1000px) {
-    background-image: url(${mainSectionTablet});
-  }
-  @media (max-width: 700px) {
+
+  @media (max-width: 850px) {
     background-image: url(${mainSectionMobile});
   }
 `;
@@ -155,8 +114,5 @@ const Area = styled.div`
   width: 100%;
   background: linear-gradient(to right, #d0d0d2, #cccbce);
 `;
-
-// background-color: #ff3629;
-//   opacity: 0.5;
 
 export default Section1;

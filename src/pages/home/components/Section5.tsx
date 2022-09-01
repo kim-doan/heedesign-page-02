@@ -28,7 +28,7 @@ const SectionLink = styled.a`
   width: 100%;
   height: 3rem;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
+  font-family: GmarketSans;
   font-size: 1.5rem;
   color: #202020;
   text-decoration: none;
@@ -44,7 +44,7 @@ const SectionContent = styled.div`
   padding: 0 1rem;
   margin: 0.8rem auto;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
+  font-family: GmarketSans;
   font-size: 2.5rem;
   color: #ff8787;
   text-align: center;

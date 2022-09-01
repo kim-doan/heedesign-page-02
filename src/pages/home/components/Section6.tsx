@@ -60,7 +60,7 @@ const Title = styled.div`
   width: 100%;
   height: 100%;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
+  font-family: GmarketSans;
 `;
 const TitleIcon = styled.div`
   display: flex;

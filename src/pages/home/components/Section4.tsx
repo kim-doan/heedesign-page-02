@@ -96,7 +96,7 @@ const SectionContent = styled.div`
   padding: 0 1rem;
   margin: 0.8rem auto;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
+  font-family: GmarketSans;
   font-size: 2.8rem;
   color: white;
   text-align: center;
@@ -178,7 +178,7 @@ const CardItemTextArea = styled.div`
 
 const CardItemBoldText = styled.div`
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
+  font-family: GmarketSans;
   font-weight: bold;
   color: white;
 `;

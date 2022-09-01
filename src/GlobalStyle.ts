@@ -1,13 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 
-const Jalnan = require("./assets/Jalnan.ttf");
-const JalnanOtf = require("./assets/JalnanOTF.otf");
+const GmarketSansLight = require("./assets/GmarketSansTTFLight.ttf");
+const GmarketSans = require("./assets/GmarketSansTTFMedium.ttf");
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "Jalnan";
-    src: url("${Jalnan}") format("truetype");
-    src: url("${JalnanOtf}") format("opentype");
+    font-family: "GmarketSans";
+    src: url("${GmarketSans}") format("truetype");
+  }
+
+  @font-face {
+    font-family: "GmarketSansLight";
+    src: url("${GmarketSansLight}") format("truetype");
   }
 
   html,

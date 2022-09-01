@@ -1,39 +1,102 @@
+import human from "assets/human.png";
 import React from "react";
 import styled from "styled-components";
 
-import { AnimationWrapper } from "components/Animation";
-import ImageSlide from "components/ImageSlider";
-
-const Section3 = () => (
+const Section2 = () => (
   <Area>
+    <TopRect />
     <Wrapper>
-      <Section type="fadeLeft" delay={300}>
-        <SectionIcon />
-        <SectionContent>
-          <span>손님이 끊기지 않는이유</span>
-        </SectionContent>
-        <SectionContent2>
-          <span>후기가 증명</span>
-        </SectionContent2>
-        <SectionSliderGroup>
-          <ImageSlide />
-        </SectionSliderGroup>
+      <Section>
+        <TitleSection color="white">
+          <span>휴대폰 비쌀이유가 없습니다</span>
+        </TitleSection>
+        <TitleSection color="white">
+          <b>휴대폰 성지라고 다 같은 성지가 아니에요</b>
+        </TitleSection>
+        <ImageSection>
+          <img src={human} alt="human" />
+          <RectSection>폰(싸게)파는 언니는 다릅니다!</RectSection>
+        </ImageSection>
       </Section>
     </Wrapper>
   </Area>
 );
 
-const Section = styled(AnimationWrapper)`
+const TopRect = styled.div`
+  width: 10px;
+  height: 50px;
+  margin: auto;
+  background-color: #002d51;
+`;
+
+const TitleSection = styled.div<{ color?: string }>`
+  color: #fff;
+  white-space: nowrap;
+
+  b {
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: GmarketSans;
+    font-size: 2rem;
+    font-weight: bold;
+    color: ${(props) => props.color || "#fff"};
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    span {
+      font-size: 1.5rem;
+    }
+
+    b {
+      font-size: 1.5rem;
+    }
+  }
+`;
+
+const ImageSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  height: 300px;
+  margin-top: 50px;
+
+  img {
+    height: 100%;
+    min-height: 250px;
+  }
+`;
+
+const RectSection = styled.div`
+  padding: 15px 30px;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: GmarketSans;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #002d51;
+  border: 2px solid #fff;
+
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
-  height: 150vh;
-  @media (max-width: 1000px) {
-    gap: 0.1rem;
-    height: 90vh;
+  height: 100vh;
+
+  @media (max-width: 500px) {
+    gap: 15px;
+    height: 500px;
   }
 `;
 
@@ -43,75 +106,12 @@ const Wrapper = styled.div`
   align-items: center;
   max-width: calc(1280px + 15rem);
   height: 100%;
-  padding: 0 1rem;
   margin: 0 auto;
 `;
 
 const Area = styled.div`
   width: 100%;
-  background-image: linear-gradient(#eaeaea 1px, transparent 1px),
-    linear-gradient(to right, #eaeaea 1px, #c3ddda 1px);
-  background-color: #c3ddda;
-  background-size: 20px 20px;
+  background: #5b79db;
 `;
 
-const SectionContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5rem;
-  padding: 0 1rem;
-  margin: 0.8rem auto;
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
-  font-size: 2.8rem;
-  color: #363636;
-  text-align: center;
-  -webkit-text-stroke: 0.12rem white;
-
-  @media (max-width: 550px) {
-    font-size: 2.3rem;
-    white-space: nowrap;
-    -webkit-text-stroke: 0.08rem white;
-  }
-`;
-
-const SectionContent2 = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5rem;
-  padding: 0 1rem;
-  margin: 0.8rem auto;
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: Jalnan;
-  font-size: 2.8rem;
-  color: #073b61;
-  text-align: center;
-  -webkit-text-stroke: 0.12rem white;
-
-  @media (max-width: 550px) {
-    font-size: 2.3rem;
-    white-space: nowrap;
-    -webkit-text-stroke: 0.08rem white;
-  }
-`;
-
-const SectionSliderGroup = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 65%;
-  height: 75vh;
-
-  @media (max-width: 800px) {
-    width: 100%;
-  }
-`;
-
-const SectionIcon = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3.5rem;
-`;
-export default Section3;
+export default Section2;
