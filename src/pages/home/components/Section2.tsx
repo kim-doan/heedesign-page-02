@@ -1,4 +1,5 @@
 import section2Background from "assets/section2Background.png";
+import section2Logo from "assets/section2Logo.png";
 import React from "react";
 import styled from "styled-components";
 
@@ -24,9 +25,7 @@ const Section2 = () => (
                 </span>
               </TitleSection>
               <TitleSection color="#011E23">
-                <span>
-                  <b>폰싸게파는언니</b>
-                </span>
+                <img src={section2Logo} alt="section2Logo" />
               </TitleSection>
             </TitleWrapper>
           </Title>
@@ -51,6 +50,7 @@ const RectText = styled.div`
   font-family: GmarketSansLight;
   font-size: 1.8rem;
   color: #012027;
+  word-break: no-wrap;
   border: 2px solid #012027;
   border-radius: 30px;
 
@@ -66,7 +66,7 @@ const ImageArea = styled.div`
   text-align: center;
 
   img {
-    max-width: 700px;
+    max-width: 770px;
   }
 
   @media (max-width: 700px) {
@@ -124,10 +124,20 @@ const TitleSection = styled.div<{ color?: string }>`
     font-size: 2.5rem;
   }
 
+  img {
+    height: 100px;
+  }
+
   @media (max-width: 700px) {
+    text-align: center;
+
     span {
       font-size: 2rem;
       white-space: word-wrap;
+    }
+
+    img {
+      height: 50px;
     }
   }
 `;

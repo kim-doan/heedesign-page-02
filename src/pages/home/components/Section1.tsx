@@ -23,6 +23,9 @@ const Section1 = () => (
                 <b>아니다</b>
               </span>
             </TitleSection>
+            <TitleSection2 color="#011E23">
+              <span>전국최저가 보장</span>
+            </TitleSection2>
           </Title>
         </Partition>
       </Section>
@@ -71,6 +74,30 @@ const TitleSection = styled.div<{ color?: string }>`
   @media (max-width: 700px) {
     span {
       font-size: 3rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+`;
+
+const TitleSection2 = styled.div<{ color?: string }>`
+  color: #011e23;
+  letter-spacing: 0.2rem;
+  white-space: nowrap;
+
+  b {
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: GmarketSans;
+    font-weight: bold;
+    color: ${(props) => props.color || "#fff"};
+  }
+
+  span {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 700px) {
+    span {
+      font-size: 1rem;
       letter-spacing: 0.1rem;
     }
   }

@@ -1,4 +1,3 @@
-import LogoImg from "assets/logo.png";
 import React from "react";
 import styled from "styled-components";
 
@@ -6,7 +5,6 @@ const Footer = () => (
   <Area>
     <Wrapper>
       <FtGroup>
-        <FtLogo />
         <FtInfo>
           <InfoItem>
             <b>상호명</b> : 청춘
@@ -45,18 +43,15 @@ const FtGroup = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    height: 20vh;
     padding-top: 0;
   }
 `;
 
-const FtLogo = styled.div`
-  width: 150px;
-  padding: 1rem;
-  background-image: url(${LogoImg});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-`;
+// const FtLogo = styled.div`
+//   width: 150px;
+//   padding: 1rem;
+// `;
 
 const FtInfo = styled.div`
   display: flex;
@@ -90,7 +85,7 @@ const Wrapper = styled.div`
 
 const Area = styled.div`
   width: 100%;
-  background-color: #464946;
+  background-color: #2a2c2b;
 `;
 
 export default Footer;

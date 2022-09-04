@@ -26,7 +26,7 @@ const TopRect = styled.div`
   width: 10px;
   height: 50px;
   margin: auto;
-  background-color: #002d51;
+  background-color: #fff;
 `;
 
 const TitleSection = styled.div<{ color?: string }>`
@@ -66,12 +66,22 @@ const ImageSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 800px;
   margin-top: 50px;
 
   img {
     height: 100%;
-    min-height: 250px;
+    min-height: 800px;
+  }
+
+  @media (max-width: 700px) {
+    height: 400px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+    }
   }
 `;
 
@@ -97,11 +107,11 @@ const Section = styled.div`
   justify-content: center;
   gap: 20px;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
 
   @media (max-width: 500px) {
     gap: 15px;
-    height: 500px;
+    height: 700px;
   }
 `;
 
@@ -115,7 +125,7 @@ const Wrapper = styled.div`
 
 const Area = styled.div`
   width: 100%;
-  background: #5b79db;
+  background: #3e403f;
 `;
 
 export default Section2;

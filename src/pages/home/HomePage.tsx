@@ -28,7 +28,7 @@ const HomePage = () => (
 const FixedButtonArea = styled.div`
   width: 100%;
   height: 3.2rem;
-  background-color: #464946;
+  background-color: #2a2c2b;
 `;
 
 export default HomePage;
