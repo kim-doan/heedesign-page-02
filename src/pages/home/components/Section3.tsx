@@ -32,11 +32,12 @@ const TopRect = styled.div`
 const TitleSection = styled.div<{ color?: string }>`
   padding-right: 20px;
   padding-left: 20px;
+
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: GmarketSans;
   color: #fff;
 
   b {
-    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-    font-family: GmarketSans;
     font-size: 2rem;
     font-weight: bold;
     color: ${(props) => props.color || "#fff"};
@@ -47,12 +48,15 @@ const TitleSection = styled.div<{ color?: string }>`
   }
 
   @media (max-width: 700px) {
+    padding-right: 10px;
+    padding-left: 10px;
+
     span {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
 
     b {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
   }
 `;
