@@ -1,66 +1,85 @@
-import CheckIcon from "assets/checkIcon.png";
-import SectionBackground from "assets/sectionBackground.png";
+import badge from "assets/badge.png";
+import reviewImage from "assets/reviewImage_02.png";
 import React from "react";
 import styled from "styled-components";
 
 const Section5 = () => (
   <Area>
+    <TopRect />
     <Wrapper>
       <Section>
-        <SectionIcon>
-          <img src={CheckIcon} height="100%" alt="check" />
-        </SectionIcon>
-        <SectionContent>
-          <span>사전승낙판매점</span>
-        </SectionContent>
-        <SectionLink href="https://www.google.com">
-          <span>링크</span>
-        </SectionLink>
+        <TitleSection>
+          <span>
+            다양한 <b>후기가 말해주는</b>
+          </span>
+        </TitleSection>
+        <BadgeSection>
+          <img src={badge} alt="badge" />
+        </BadgeSection>
+        <ImageSection>
+          <img src={reviewImage} alt="review" />
+        </ImageSection>
       </Section>
     </Wrapper>
   </Area>
 );
 
-const SectionLink = styled.a`
+const ImageSection = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 3rem;
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: GmarketSans;
-  font-size: 1.5rem;
-  color: #202020;
-  text-decoration: none;
-  background-color: #ffce50;
-  border-radius: 40px;
-`;
+  width: 90%;
+  height: 100%;
+  margin: 3rem 0;
+  background-color: #fff;
+  border-radius: 3rem;
 
-const SectionContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5rem;
-  padding: 0 1rem;
-  margin: 0.8rem auto;
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: GmarketSans;
-  font-size: 2.5rem;
-  color: #ff8787;
-  text-align: center;
-  -webkit-text-stroke: 0.12rem white;
+  .shadow {
+    box-shadow: 0 4px 5px rgb(0 0 0 / 60%);
+  }
 
-  @media (max-width: 550px) {
-    font-size: 2rem;
-    -webkit-text-stroke: 0.08rem white;
+  img {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 10px;
   }
 `;
 
-const SectionIcon = styled.div`
+const BadgeSection = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 5rem;
+  width: 200px;
+  height: 200px;
+  margin-top: 2rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100px;
+    height: 100px;
+  }
+`;
+
+const TitleSection = styled.div`
+  margin-top: 4rem;
+
+  span {
+    font-size: 2rem;
+  }
+`;
+
+const TopRect = styled.div`
+  width: 10px;
+  height: 50px;
+  margin: auto;
+  background-color: #002d51;
 `;
 
 const Section = styled.div`
@@ -68,11 +87,10 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
   width: 100%;
-  height: 80vh;
+  height: 180vh;
   @media (max-width: 1000px) {
-    height: 50vh;
+    height: 80vh;
   }
 `;
 
@@ -81,17 +99,20 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
-  padding-right: 5rem;
-  padding-left: 5rem;
+  padding: 0 1rem;
   margin: 0 auto;
 `;
 
 const Area = styled.div`
   width: 100%;
-  background-image: url(${SectionBackground});
-  background-color: #f4f2eb;
+  background-color: #e9e9e9;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 900px) {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 `;
 
 export default Section5;
