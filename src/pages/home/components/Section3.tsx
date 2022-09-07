@@ -75,7 +75,7 @@ const ImageSection = styled.div`
   }
 
   @media (max-width: 700px) {
-    height: 400px;
+    height: 360px;
 
     img {
       width: 100%;

@@ -28,7 +28,7 @@ const ImageSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin: 3rem 0;
   background-color: #fff;
@@ -40,9 +40,8 @@ const ImageSection = styled.div`
 
   img {
     position: relative;
-    width: 90%;
-    height: 90%;
-    margin: 10px;
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -87,7 +86,7 @@ const Section = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 170vh;
+  height: 210vh;
   @media (max-width: 1000px) {
     height: 80vh;
   }
@@ -98,8 +97,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
-  padding: 0 1rem;
   margin: 0 auto;
+
+  @media (min-width: 700px) {
+    padding: 0 1rem;
+  }
 `;
 
 const Area = styled.div`

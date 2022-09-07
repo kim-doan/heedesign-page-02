@@ -1,3 +1,4 @@
+import section6BackgroundMobile from "assets/section6Background_m.png";
 import section6Background from "assets/section6Background.png";
 import * as React from "react";
 import styled from "styled-components";
@@ -24,10 +25,16 @@ const Section = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
   @media (max-width: 768px) {
     flex-direction: column;
-    height: 30vh;
+    height: 55vh;
     padding-top: 1rem;
+    background: url(${section6BackgroundMobile});
+    background-color: #404241;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 `;
 
