@@ -1,4 +1,5 @@
 import human from "assets/human.png";
+import whiteLogo from "assets/whiteLogo.png";
 import React from "react";
 import styled from "styled-components";
 
@@ -15,7 +16,9 @@ const Section2 = () => (
         </TitleSection>
         <ImageSection>
           <img src={human} alt="human" />
-          <RectSection>폰(싸게)파는 언니는 다릅니다!</RectSection>
+          <RectSection>
+            <img src={whiteLogo} alt="whiteLogo" />는 다릅니다!
+          </RectSection>
         </ImageSection>
       </Section>
     </Wrapper>
@@ -78,8 +81,6 @@ const ImageSection = styled.div`
     height: 360px;
 
     img {
-      width: 100%;
-      height: 100%;
       min-height: 200px;
     }
   }
@@ -95,8 +96,21 @@ const RectSection = styled.div`
   background-color: #002d51;
   border: 2px solid #fff;
 
+  img {
+    height: 2.5rem;
+    min-height: 2.5rem;
+    margin: -0.15rem 0.5rem;
+  }
+
   @media (max-width: 700px) {
     font-size: 1.5rem;
+
+    img {
+      width: 8.5rem;
+      height: 2.5rem;
+      min-height: 2.5rem;
+      margin: -0.3rem 0.5rem;
+    }
   }
 `;
 

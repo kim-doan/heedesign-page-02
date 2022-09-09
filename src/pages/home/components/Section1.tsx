@@ -1,37 +1,51 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import checkIcon from "assets/checkIcon.png";
 import mainSectionMobile from "assets/mainSection_m.png";
 import mainSection from "assets/mainSection.png";
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 
-const Section1 = () => (
-  <Area>
-    <Wrapper>
-      <Section>
-        <Partition>
-          <BlankArea />
-          <Title>
-            <TitleSection color="#011E23">
-              <span>이세상</span>
-            </TitleSection>
-            <TitleSection color="#011E23">
-              <span>
-                <b>가격이</b>
-              </span>
-            </TitleSection>
-            <TitleSection color="#011E23">
-              <span>
-                <b>아니다</b>
-              </span>
-            </TitleSection>
-            <TitleSection2 color="#011E23">
-              <span>전국최저가 보장</span>
-            </TitleSection2>
-          </Title>
-        </Partition>
-      </Section>
-    </Wrapper>
-  </Area>
-);
+const Section1 = () => {
+  const handleClick = useCallback(() => {
+    window.open(
+      "https://www.ictmarket.or.kr:8443/ajax/ajax3.do?id=PRE0000163234&seq=1&yn=1",
+    );
+  }, []);
+
+  return (
+    <Area>
+      <Wrapper>
+        <Section>
+          <Partition>
+            <BlankArea />
+            <Title>
+              <TitleSection>
+                <img src={checkIcon} alt={checkIcon} onClick={handleClick} />
+              </TitleSection>
+              <TitleSection color="#011E23">
+                <span>이세상</span>
+              </TitleSection>
+              <TitleSection color="#011E23">
+                <span>
+                  <b>가격이</b>
+                </span>
+              </TitleSection>
+              <TitleSection color="#011E23">
+                <span>
+                  <b>아니다</b>
+                </span>
+              </TitleSection>
+              <TitleSection2 color="#011E23">
+                <span>전국최저가 보장</span>
+              </TitleSection2>
+            </Title>
+          </Partition>
+        </Section>
+      </Wrapper>
+    </Area>
+  );
+};
 
 const BlankArea = styled.div`
   flex: 2;
@@ -71,10 +85,21 @@ const TitleSection = styled.div<{ color?: string }>`
     font-size: 3.8rem;
   }
 
+  img {
+    height: 3.8rem;
+    margin-left: 7.5rem;
+    cursor: pointer;
+  }
+
   @media (max-width: 700px) {
     span {
       font-size: 3rem;
       letter-spacing: 0.1rem;
+    }
+
+    img {
+      margin-left: 5rem;
+      font-size: 3rem;
     }
   }
 `;

@@ -15,7 +15,7 @@ const FixedButtonGroup = () => (
         <b>카카오톡</b> 문의하기
       </p>
     </KakaoContactAnchor>
-    <PhoneContactAnchor href="tel: 052-235-5550">
+    <PhoneContactAnchor href="tel: 010-7697-8715">
       <ContactPhoneImg alt="Contact Phone" src={phone} />
       <p>
         지금 바로 <b>전화상담</b>
